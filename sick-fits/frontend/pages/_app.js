@@ -5,12 +5,12 @@ import NProgress from "next-nprogress/component";
 
 class MyApp extends App {
   render() {
-    const { Component } = this.props
+    const { Component, pageProps } = this.props
 
     return (
       <Container>
         <NProgress color="red" />
-        <Page><Component /></Page>
+        <Page><Component {...pageProps} /></Page>
       </Container>
     )
   }
